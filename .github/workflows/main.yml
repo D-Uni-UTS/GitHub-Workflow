@@ -23,4 +23,6 @@ jobs:
           fi
           
           # check if the github actor is Stephen-Tubb-UTS
-          sed -i '/<\/body>/i <p>Updated by Stephen-Tubb-UTS on '"$(date)"'</p>' index.html
+          if [ "${{ github.actor }}" == "Stephen-Tubb-UTS" ]; then
+            sed -i '/<\/body>/i <p>Updated by Stephen-Tubb-UTS on '"$(date)"'</p>' index.html
+          fi
