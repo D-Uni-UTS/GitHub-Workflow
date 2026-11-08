@@ -13,13 +13,9 @@ jobs:
       - name: Checkout Respository
         uses: actions/checkout@v3
 
-
       # Step 2: update index.html
- 
-
-
-
-
+      #Check if the github actor is D-Uni-UTS
+       sed -i '/<\/body>/i <p>Updated by D-Uni-UTS on '"$(date)"'</p>' index.html
 
       # check if the github actor is Stephen-Tubb-UTS
-      sed -i '/<\/body>/i <p>Updated by Stephen-Tubb-UTS on '"$(date)"'</p>' index.html
+       sed -i '/<\/body>/i <p>Updated by Stephen-Tubb-UTS on '"$(date)"'</p>' index.html
