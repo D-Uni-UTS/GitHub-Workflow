@@ -12,3 +12,14 @@ jobs:
       # Step 1: Checkout the respository
       - name: Checkout Respository
         uses: actions/checkout@v3
+
+
+      # Step 2: update index.html
+ 
+
+
+
+
+
+      # check if the github actor is Stephen-Tubb-UTS
+      sed -i '/<\/body>/i <p>Updated by Stephen-Tubb-UTS on '"$(date)"'</p>' index.html
